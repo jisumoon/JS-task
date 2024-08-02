@@ -61,7 +61,7 @@ for (let i = 0; i < num.length; i++) {
   }
 }
 
-arr = [a, b, c];
+const [a, b, c] = arr;
 
 if (a + b > c && a + c > b && b + c > a) {
   alert("Yes");
