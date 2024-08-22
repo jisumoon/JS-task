@@ -1,21 +1,17 @@
-import React, { useState } from "react";
-import Square from "./square";
+import React from "react";
 
-function Board() {
-  const [squares, setSquares] = useState(Array(9).fill(null));
-  const [isXNext, setIsXNext] = useState(true);
+function Square({ value, onClick }) {
+  return (
+    <button className="square" onClick={onClick}>
+      {value}
+    </button>
+  );
+}
 
-  function handleClick(i) {
-    const newSquares = squares.slice();
-    if (newSquares[i]) return;
-    newSquares[i] = isXNext ? "X" : "O";
-    setSquares(newSquares);
-    setIsXNext(!isXNext);
-  }
-
-  function renderSquare(i) {
-    return <Square value={squares[i]} onClick={() => handleClick(i)} />;
-  }
+function Board({ squares, onClick }) {
+  const renderSquare = (i) => {
+    return <Square key={i} value={squares[i]} onClick={() => onClick(i)} />;
+  };
 
   return (
     <div>

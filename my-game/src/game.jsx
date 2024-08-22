@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Board from "./Board";
+import Board from "./board.jsx"; // Board 컴포넌트를 가져옵니다.
 
 function Game() {
   const [history, setHistory] = useState([{ squares: Array(9).fill(null) }]);
@@ -37,7 +37,7 @@ function Game() {
         <Board squares={current.squares} onClick={(i) => handleClick(i)} />
       </div>
       <div className="game-info">
-        <div>{status}</div>
+        <div className="status-message">{status}</div> {/* 여기에 넣습니다 */}
         <ol>
           {history.map((_, move) => (
             <li key={move}>
