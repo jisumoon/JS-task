@@ -29,6 +29,8 @@ switch (true) {
 
 alert(`${answer}점은 ${grade} 입니다`);
 
+// return 과 break
+
 // let answer = Number(prompt("받은 점수를 알려주세요", "0~100"));
 
 // if (answer >= 90) {
@@ -42,3 +44,5 @@ alert(`${answer}점은 ${grade} 입니다`);
 // } else if (answer >= 0 && answer <= 59) {
 //   alert("F등급");
 // }
+
+// 두ㅣ 에 있는 부분 생략해도 가능
